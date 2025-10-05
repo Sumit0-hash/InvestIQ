@@ -7,7 +7,6 @@ async function main() {
         console.error('ERROR: MONGODB_URI must be set in .env');
         process.exit(1);
     }
-
     try {
         const startedAt = Date.now();
         await mongoose.connect(uri, { bufferCommands: false });
@@ -26,5 +25,4 @@ async function main() {
         process.exit(1);
     }
 }
-
 main();
